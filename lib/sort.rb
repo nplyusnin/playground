@@ -1,5 +1,20 @@
+require_relative "./custom_array"
+require 'pry'
+
 module Sort
   extend self
+
+  def sort(array)
+    sorted_array = []
+
+    array.length.times do
+      min = CustomArray.min(array)
+      sorted_array << min
+      array.delete(min)
+    end
+
+    sorted_array
+  end
 
   def qsort(array)
     if array.length < 2
