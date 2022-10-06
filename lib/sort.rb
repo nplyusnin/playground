@@ -1,5 +1,4 @@
 require_relative "./custom_array"
-require 'pry'
 
 module Sort
   extend self
